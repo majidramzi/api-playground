@@ -1,0 +1,97 @@
+@import 'tailwindcss';
+
+/* Class-based dark mode for Tailwind v4. */
+@custom-variant dark (&:where(.dark, .dark *));
+
+:root {
+  color-scheme: light;
+}
+
+.dark {
+  color-scheme: dark;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family:
+    ui-sans-serif,
+    system-ui,
+    -apple-system,
+    'Segoe UI',
+    Roboto,
+    'Helvetica Neue',
+    Arial,
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+/* ---- JSON syntax highlighting tokens (used by the response viewer) ---- */
+
+.json-key {
+  color: #7c3aed;
+}
+
+.json-string {
+  color: #059669;
+}
+
+.json-number {
+  color: #2563eb;
+}
+
+.json-boolean {
+  color: #d97706;
+}
+
+.json-null {
+  color: #db2777;
+}
+
+.json-punct {
+  color: #64748b;
+}
+
+.dark .json-key {
+  color: #c4b5fd;
+}
+
+.dark .json-string {
+  color: #6ee7b7;
+}
+
+.dark .json-number {
+  color: #93c5fd;
+}
+
+.dark .json-boolean {
+  color: #fcd34d;
+}
+
+.dark .json-null {
+  color: #f9a8d4;
+}
+
+.dark .json-punct {
+  color: #94a3b8;
+}
+
+/* Slimmer scrollbars for dense panels */
+* {
+  scrollbar-width: thin;
+}
+
+/* CodeMirror containers should not add double borders */
+.cm-editor {
+  font-size: 12.5px;
+}
+
+.cm-editor.cm-focused {
+  outline: none;
+}
